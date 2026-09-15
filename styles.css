@@ -1,0 +1,37 @@
+/* Configuración del contenedor del Card con perspectiva 3D */
+.card-container {
+    perspective: 1000px;
+    width: 260px;
+    height: 260px;
+}
+
+/* Estructura interna del Card para soportar el giro en 3D */
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+/* Efecto Hover: Giro limpio de 180 grados */
+.card-container:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Propiedades comunes de las caras del card */
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Configuración del dorso orientado correctamente */
+.card-back {
+    transform: rotateY(180deg);
+}
