@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page 02 - Playas y Ciudades del Perú</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen p-4">
+
+  <!-- Título principal -->
+  <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">
+    Top 10 Playas y Ciudades del Perú
+  </h1>
+
+  <!-- GRID: 1 fila, 2 columnas -->
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+    <!-- ==================== COLUMNA A: PLAYAS ==================== -->
+    <section class="bg-white p-4 rounded-xl shadow-md">
+      <h2 class="text-2xl font-bold mb-4 text-center text-gray-800">
+        Top 10 Playas del Perú
+      </h2>
+      <!-- Flexbox con separación de 10px -->
+      <div id="playas-container" class="flex flex-wrap gap-[10px] justify-center">
+        <!-- Los cards se generan con JavaScript -->
+      </div>
+    </section>
+
+    <!-- ==================== COLUMNA B: CIUDADES ==================== -->
+    <section class="bg-white p-4 rounded-xl shadow-md">
+      <h2 class="text-2xl font-bold mb-4 text-center text-gray-800">
+        Top 10 Ciudades del Perú
+      </h2>
+      <!-- Flexbox con separación de 5px -->
+      <div id="ciudades-container" class="flex flex-wrap gap-[5px] justify-center">
+        <!-- Los cards se generan con JavaScript -->
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ==================== JAVASCRIPT ==================== -->
+  <script>
+    // ---------- Datos de las 10 playas más importantes del Perú ----------
+    const playas = [
+      { 
+        nombre: "Máncora", 
+        ubicacion: "Piura", 
+        img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&q=80" 
+      },
+      { 
+        nombre: "Punta Sal", 
+        ubicacion: "Tumbes", 
+        img: "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=400&q=80" 
+      },
+      { 
+        nombre: "Huanchaco", 
+        ubicacion: "La Libertad", 
+        img: "https://images.unsplash.com/photo-1509233725247-49e657c54213?w=400&q=80" 
+      },
+      { 
+        nombre: "Zorritos", 
+        ubicacion: "Tumbes", 
+        img: "https://images.unsplash.com/photo-1473116763249-2faaef81ccda?w=400&q=80" 
+      },
+      { 
+        nombre: "Cabo Blanco", 
+        ubicacion: "Piura", 
+        img: "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=400&q=80" 
+      },
+      { 
+        nombre: "Chicama", 
+        ubicacion: "La Libertad", 
+        img: "https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=400&q=80" 
+      },
+      { 
+        nombre: "Paracas", 
+        ubicacion: "Ica", 
+        img: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&q=80" 
+      },
+      { 
+        nombre: "La Mina", 
+        ubicacion: "Ica", 
+        img: "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?w=400&q=80" 
+      },
+      { 
+        nombre: "Asia", 
+        ubicacion: "Lima", 
+        img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&q=80" 
+      },
+      { 
+        nombre: "Punta Hermosa", 
+        ubicacion: "Lima", 
+        img: "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=400&q=80" 
+      }
+    ];
+
+    // ---------- Datos de las 10 ciudades más importantes del Perú ----------
+    const ciudades = [
+      { nombre: "Lima",      temp: "64°F", viento: "123 km/h", humedad: "48%" },
+      { nombre: "Arequipa",  temp: "58°F", viento: "80 km/h",  humedad: "40%" },
+      { nombre: "Trujillo",  temp: "68°F", viento: "90 km/h",  humedad: "55%" },
+      { nombre: "Cusco",     temp: "52°F", viento: "60 km/h",  humedad: "35%" },
+      { nombre: "Piura",     temp: "78°F", viento: "110 km/h", humedad: "60%" },
+      { nombre: "Iquitos",   temp: "82°F", viento: "50 km/h",  humedad: "80%" },
+      { nombre: "Huancayo",  temp: "55°F", viento: "70 km/h",  humedad: "45%" },
+      { nombre: "Tacna",     temp: "62°F", viento: "85 km/h",  humedad: "30%" },
+      { nombre: "Puno",      temp: "48°F", viento: "65 km/h",  humedad: "40%" },
+      { nombre: "Chiclayo",  temp: "70°F", viento: "95 km/h",  humedad: "58%" }
+    ];
+
+    // ---------- Generar cards de PLAYAS ----------
+    const playasContainer = document.getElementById("playas-container");
+    playas.forEach((playa, i) => {
+      playasContainer.innerHTML += `
+        <article class="playa-card w-[200px] h-[120px] relative rounded-lg overflow-hidden shadow-lg">
+          <!-- Imagen de fondo -->
+          <img
+            src="${playa.img}"
+            alt="${playa.nombre}"
+            class="absolute inset-0 w-full h-full object-cover"
+            loading="lazy"
+          />
+          <!-- Overlay oscuro -->
+          <div class="absolute inset-0 bg-black/50"></div>
+
+          <!-- Contenido -->
+          <div class="relative z-10 flex flex-col justify-between h-full p-2 text-white">
+            <h3 class="text-[10px] font-bold leading-tight">
+              Top 10 Playas del Perú
+            </h3>
+
+            <div>
+              <p class="text-[8px] text-gray-300">Number ${10 - i}</p>
+              <p class="text-[9px] font-semibold leading-tight">${playa.nombre}</p>
+              <p class="text-[8px] text-gray-300 leading-tight">${playa.ubicacion}</p>
+            </div>
+
+            <!-- Botones con hover a gris más claro -->
+            <div class="flex gap-2">
+              <button class="text-[8px] font-bold text-amber-400 hover:text-gray-300 transition-colors duration-300">
+                SHARE
+              </button>
+              <button class="text-[8px] font-bold text-amber-400 hover:text-gray-300 transition-colors duration-300">
+                EXPLORE
+              </button>
+            </div>
+          </div>
+        </article>
+      `;
+    });
+
+    // ---------- Generar cards de CIUDADES ----------
+    const ciudadesContainer = document.getElementById("ciudades-container");
+    ciudades.forEach((ciudad) => {
+      ciudadesContainer.innerHTML += `
+        <article class="ciudad-card w-[250px] h-[200px] bg-gray-900 rounded-xl p-4 text-white flex flex-col justify-between shadow-lg">
+          <!-- Encabezado -->
+          <div>
+            <h3 class="text-lg font-bold">${ciudad.nombre}</h3>
+            <p class="text-xs text-red-400 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 2L1 18h18L10 2zm0 4l6 10H4l6-10zm-1 6h2v2h-2v-2zm0-4h2v3h-2V8z"/>
+              </svg>
+              Alerta de clima extremo
+            </p>
+          </div>
+
+          <!-- Temperatura e ícono -->
+          <div class="flex items-center justify-between">
+            <span class="text-4xl font-light">${ciudad.temp}</span>
+            <svg class="w-10 h-10 text-red-400" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 18a8 8 0 110-16 8 8 0 010 16z"/>
+            </svg>
+          </div>
+
+          <!-- Detalles -->
+          <div class="flex justify-between text-xs text-gray-400">
+            <span class="flex items-center gap-1">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2 10h16v2H2z"/>
+              </svg>
+              ${ciudad.viento}
+            </span>
+            <span class="flex items-center gap-1">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 2a6 6 0 00-6 6c0 4 6 10 6 10s6-6 6-10a6 6 0 00-6-6z"/>
+              </svg>
+              ${ciudad.humedad}
+            </span>
+          </div>
+
+          <!-- Botón con hover a gris más claro -->
+          <button class="w-full text-left text-xs font-bold text-gray-300 hover:text-gray-500 transition-colors duration-300 uppercase tracking-wider">
+            Full Report
+          </button>
+        </article>
+      `;
+    });
+  </script>
+
+</body>
+</html>
