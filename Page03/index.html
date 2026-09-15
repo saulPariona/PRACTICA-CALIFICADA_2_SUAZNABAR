@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Plantas</title>
+    <!-- Incluyendo Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandDark: '#121212',
+                        brandOlive: '#6b6e4b',
+                        brandLightBg: '#e6e4df',
+                        brandOrange: '#c85a17',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Archivo CSS Externo -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-brandLightBg text-gray-900 font-sans">
+
+    <!-- Top Notification Bar -->
+    <div class="bg-brandOlive text-white text-xs py-2 px-4 flex justify-center items-center gap-4">
+        <span>-15% en la primera compra</span>
+        <button class="border border-white px-3 py-1 rounded-full text-xs hover:bg-white hover:text-brandOlive transition">Registrarse</button>
+    </div>
+
+    <!-- Main Header & Navigation -->
+    <header class="bg-brandDark text-white px-8 py-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <!-- Navigation Links / Tabs -->
+            <nav class="flex flex-wrap gap-2 bg-black/40 border border-neutral-800 p-1 rounded-md">
+                <a href="#" class="bg-brandOrange text-white px-4 py-2 rounded text-sm font-medium">Plantas</a>
+                <a href="#" class="text-neutral-400 hover:text-white px-4 py-2 rounded text-sm font-medium transition">Macetas</a>
+                <a href="#" class="text-neutral-400 hover:text-white px-4 py-2 rounded text-sm font-medium transition">Oferta</a>
+                <a href="#" class="text-neutral-400 hover:text-white px-4 py-2 rounded text-sm font-medium transition">Suscripciones</a>
+                <a href="#" class="text-neutral-400 hover:text-white px-4 py-2 rounded text-sm font-medium transition">Cuidado</a>
+            </nav>
+
+            <!-- User Actions -->
+            <div class="flex items-center gap-6">
+                <a href="#" class="flex items-center gap-2 border border-neutral-700 px-4 py-2 rounded-full text-sm hover:border-neutral-500 transition">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+                    Entrar
+                </a>
+                <a href="#" class="text-neutral-300 hover:text-white transition">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                </a>
+                <a href="#" class="text-neutral-300 hover:text-white text-sm flex items-center gap-1 transition">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                    Carrito 0
+                </a>
+            </div>
+        </div>
+
+        <!-- Title Section -->
+        <div class="text-center py-16">
+            <h1 class="text-5xl md:text-6xl font-serif tracking-wide text-neutral-100">Plantas</h1>
+        </div>
+    </header>
+
+    <!-- Product Section: Recién Llegados -->
+    <main class="max-w-7xl mx-auto px-6 py-12">
+        <div class="flex justify-between items-center mb-10">
+            <h2 class="text-4xl font-serif text-neutral-900">Recién llegados</h2>
+            <button class="bg-brandOrange text-white px-6 py-3 rounded text-sm font-medium hover:bg-opacity-90 transition">Comprar todo</button>
+        </div>
+
+        <!-- Product Grid with Flexbox for Responsive Layout -->
+        <div class="responsive-grid flex gap-6 justify-between items-stretch">
+            
+            <!-- Product 1 -->
+            <div class="flex flex-col bg-transparent">
+                <div class="relative bg-[#dcd7d0] p-6 mb-4 flex justify-center items-center h-80 rounded">
+                    <span class="absolute top-4 left-4 bg-brandOlive text-white text-xs px-3 py-1">Recién llegado</span>
+                    <!-- Imagen con efecto hover solicitado (+15% de opacidad: de 85% a 100%) -->
+                    <img src="https://images.unsplash.com/photo-1545241047-6083a3684587?auto=format&fit=crop&q=80&w=500" alt="Ficus lyrata" class="product-img h-64 object-contain">
+                </div>
+                <h3 class="font-serif text-lg text-neutral-900 mb-1">Ficus lyrata</h3>
+                <p class="text-neutral-800 font-medium mb-4">$699.99</p>
+                <button class="mt-auto border border-neutral-500 py-2.5 rounded text-sm text-neutral-800 hover:bg-neutral-200 transition">Agregar al carrito</button>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="flex flex-col bg-transparent">
+                <div class="relative bg-[#dcd7d0] p-6 mb-4 flex justify-center items-center h-80 rounded">
+                    <span class="absolute top-4 left-4 bg-brandOlive text-white text-xs px-3 py-1">Recién llegado</span>
+                    <img src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&q=80&w=500" alt="Maceta oxidada" class="product-img h-64 object-contain">
+                </div>
+                <h3 class="font-serif text-lg text-neutral-900 mb-1">Maceta oxidada</h3>
+                <p class="text-neutral-800 font-medium mb-4">$399.99</p>
+                <button class="mt-auto border border-neutral-500 py-2.5 rounded text-sm text-neutral-800 hover:bg-neutral-200 transition">Agregar al carrito</button>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="flex flex-col bg-transparent">
+                <div class="relative bg-[#dcd7d0] p-6 mb-4 flex justify-center items-center h-80 rounded">
+                    <span class="absolute top-4 left-4 bg-brandOlive text-white text-xs px-3 py-1">Recién llegado</span>
+                    <img src="https://images.unsplash.com/photo-1509423350716-97f9360b4e09?auto=format&fit=crop&q=80&w=500" alt="Cactus" class="product-img h-64 object-contain">
+                </div>
+                <h3 class="font-serif text-lg text-neutral-900 mb-1">Cactus</h3>
+                <p class="text-neutral-800 font-medium mb-4">$399.99</p>
+                <button class="mt-auto border border-neutral-500 py-2.5 rounded text-sm text-neutral-800 hover:bg-neutral-200 transition">Agregar al carrito</button>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="flex flex-col bg-transparent">
+                <div class="relative bg-[#dcd7d0] p-6 mb-4 flex justify-center items-center h-80 rounded">
+                    <span class="absolute top-4 left-4 bg-brandOlive text-white text-xs px-3 py-1">Recién llegado</span>
+                    <img src="https://images.unsplash.com/photo-1525498128493-380d1990a112?auto=format&fit=crop&q=80&w=500" alt="Cesto de madera" class="product-img h-64 object-contain">
+                </div>
+                <h3 class="font-serif text-lg text-neutral-900 mb-1">Cesto de madera</h3>
+                <p class="text-neutral-800 font-medium mb-4">$559.99</p>
+                <button class="mt-auto border border-neutral-500 py-2.5 rounded text-sm text-neutral-800 hover:bg-neutral-200 transition">Agregar al carrito</button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brandDark text-neutral-400 text-xs py-16 px-8 mt-20 border-t border-neutral-800">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between gap-10">
+            <!-- Contacto -->
+            <div class="flex flex-col gap-2 max-w-xs">
+                <h4 class="text-white font-medium text-sm mb-2">Contacto</h4>
+                <p>Dirección: Av. Fray A. Alcalde 10 44100 Guadalajara, Jal., México</p>
+                <p>Tel: +52-1-33-12345678</p>
+                <p>Email: info@misitio.com</p>
+            </div>
+            <!-- Tienda -->
+            <div class="flex flex-col gap-2">
+                <h4 class="text-white font-medium text-sm mb-2">Tienda</h4>
+                <a href="#" class="hover:text-white">Comprar todo</a>
+                <a href="#" class="hover:text-white">Plantas</a>
+                <a href="#" class="hover:text-white">Macetas</a>
+                <a href="#" class="hover:text-white">Oferta</a>
+                <a href="#" class="hover:text-white">Suscripciones</a>
+                <a href="#" class="hover:text-white">Cuidado</a>
+            </div>
+            <!-- Enlaces útiles -->
+            <div class="flex flex-col gap-2">
+                <h4 class="text-white font-medium text-sm mb-2">Enlaces útiles</h4>
+                <a href="#" class="hover:text-white">FAQ</a>
+                <a href="#" class="hover:text-white">Envío y devoluciones</a>
+                <a href="#" class="hover:text-white">Términos y condiciones</a>
+                <a href="#" class="hover:text-white">Métodos de pago</a>
+            </div>
+            <!-- Empresa -->
+            <div class="flex flex-col gap-2">
+                <h4 class="text-white font-medium text-sm mb-2">Empresa</h4>
+                <a href="#" class="hover:text-white">Nosotros</a>
+                <a href="#" class="hover:text-white">Contáctanos</a>
+            </div>
+            <!-- Horarios -->
+            <div class="flex flex-col gap-2">
+                <h4 class="text-white font-medium text-sm mb-2">Horarios</h4>
+                <p>Lun - Vie: 7:00 - 22:00</p>
+                <p>Sábado: 8:00 - 22:00</p>
+                <p>Domingo: 8:00 - 22:00</p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto text-center mt-12 pt-6 border-t border-neutral-900 text-neutral-500">
+            © 2035 Creado por
+        </div>
+    </footer>
+
+</body>
+</html>
