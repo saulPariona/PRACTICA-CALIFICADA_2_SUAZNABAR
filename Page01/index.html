@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page 01 - Inbox</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="m-0 bg-gray-200">
+
+  <div class="grid grid-cols-1 min-[701px]:grid-cols-2 min-h-screen">
+
+    <!-- ============ COLUMNA A (lista clara / turquesa) ============ -->
+    <div class="flex justify-center">
+      <div class="w-full min-[701px]:w-1/2 min-[1400px]:w-[60%] bg-white flex flex-col">
+
+        <!-- Header -->
+        <div class="flex items-center justify-between bg-teal-500 text-white px-4 py-3">
+          <div class="flex items-center gap-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <span class="text-lg font-medium">Inbox</span>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z" />
+          </svg>
+        </div>
+
+        <!-- Sección "Today" -->
+        <p class="px-4 py-2 text-xs font-semibold text-gray-500">Today</p>
+
+        <!-- Lista de mensajes -->
+        <ul class="divide-y divide-gray-100">
+
+          <li class="flex gap-3 px-4 py-3 hover:bg-gray-50 cursor-pointer">
+            <div class="w-9 h-9 rounded-full bg-pink-300 flex-shrink-0 flex items-center justify-center text-white text-sm font-bold">A</div>
+            <div class="min-w-0">
+              <p class="font-bold text-gray-800 text-sm">Brunch this weekend?</p>
+              <p class="text-sm text-gray-600 truncate">
+                <span class="text-teal-600">Ali Connors</span> — I'll be in your neighborhood doing errands this weekend. Do you want to hang out?
+              </p>
+            </div>
+          </li>
+
+          <li class="flex gap-3 px-4 py-3 hover:bg-gray-50 cursor-pointer">
+            <div class="w-9 h-9 rounded-full bg-amber-400 flex-shrink-0 flex items-center justify-center text-white text-sm font-bold">S</div>
+            <div class="min-w-0">
+              <p class="font-bold text-gray-800 text-sm">Summer BBQ</p>
+              <p class="text-sm text-gray-600 truncate">
+                <span class="text-teal-600">to Alex, Scott, Jennifer</span> — Wish I could come, but I'm out of town this weekend.
+              </p>
+            </div>
+          </li>
+
+          <li class="flex gap-3 px-4 py-3 hover:bg-gray-50 cursor-pointer">
+            <div class="w-9 h-9 rounded-full bg-purple-300 flex-shrink-0 flex items-center justify-center text-white text-sm font-bold">S</div>
+            <div class="min-w-0">
+              <p class="font-bold text-gray-800 text-sm">Oui oui</p>
+              <p class="text-sm text-gray-600 truncate">
+                <span class="text-teal-600">Sandra Adams</span> — Do you have Paris recommendations? Have you ever been?
+              </p>
+            </div>
+          </li>
+
+          <li class="flex gap-3 px-4 py-3 hover:bg-gray-50 cursor-pointer">
+            <div class="w-9 h-9 rounded-full bg-blue-300 flex-shrink-0 flex items-center justify-center text-white text-sm font-bold">T</div>
+            <div class="min-w-0">
+              <p class="font-bold text-gray-800 text-sm">Birthday gift</p>
+              <p class="text-sm text-gray-600 truncate">
+                <span class="text-teal-600">Trevor Hansen</span> — Have any ideas about what we should get Heidi for her birthday?
+              </p>
+            </div>
+          </li>
+
+          <li class="flex gap-3 px-4 py-3 hover:bg-gray-50 cursor-pointer">
+            <div class="w-9 h-9 rounded-full bg-green-300 flex-shrink-0 flex items-center justify-center text-white text-sm font-bold">B</div>
+            <div class="min-w-0">
+              <p class="font-bold text-gray-800 text-sm">Recipe to try</p>
+              <p class="text-sm text-gray-600 truncate">
+                <span class="text-teal-600">Britta Holt</span> — We should eat this: Grate, Squash, Corn, and tomatillo Tacos.
+              </p>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+
+    <!-- ============ COLUMNA B (lista oscura / rosa) ============ -->
+    <div class="flex justify-center">
+      <div class="w-full min-[701px]:w-1/2 min-[1400px]:w-[60%] bg-gray-900 flex flex-col">
+
+        <!-- Header -->
+        <div class="flex items-center justify-between bg-pink-600 text-white px-4 py-3">
+          <div class="flex items-center gap-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <span class="text-lg font-medium">Inbox</span>
+          </div>
+          <div class="flex items-center gap-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Lista de mensajes -->
+        <ul class="divide-y divide-gray-800">
+
+          <li class="flex items-center justify-between px-4 py-3 hover:bg-gray-800/60 cursor-pointer">
+            <div class="min-w-0">
+              <p class="text-sm text-gray-200 font-semibold">Ali Connors</p>
+              <p class="font-bold text-white text-sm">Brunch this weekend?</p>
+              <p class="text-sm text-gray-400 truncate">I'll be in your neighborhood doing errands this weekend. Do yo...</p>
+            </div>
+            <div class="flex flex-col items-end gap-2 pl-3 flex-shrink-0">
+              <span class="text-xs text-gray-400">15 min</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.196-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.783-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+              </svg>
+            </div>
+          </li>
+
+          <li class="flex items-center justify-between px-4 py-3 bg-pink-950/40 hover:bg-pink-950/60 cursor-pointer">
+            <div class="min-w-0">
+              <p class="text-sm text-pink-400 font-semibold">me, Scott, Jennifer</p>
+              <p class="font-bold text-white text-sm">Summer BBQ</p>
+              <p class="text-sm text-gray-400 truncate">Wish I could come, but I'm out of town this weekend.</p>
+            </div>
+            <div class="flex flex-col items-end gap-2 pl-3 flex-shrink-0">
+              <span class="text-xs text-gray-400">2 hr</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.196-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.783-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+              </svg>
+            </div>
+          </li>
+
+          <li class="flex items-center justify-between px-4 py-3 hover:bg-gray-800/60 cursor-pointer">
+            <div class="min-w-0">
+              <p class="text-sm text-gray-200 font-semibold">Sandra Adams</p>
+              <p class="font-bold text-white text-sm">Oui oui</p>
+              <p class="text-sm text-gray-400 truncate">Do you have Paris recommendations? Have you ever been?</p>
+            </div>
+            <div class="flex flex-col items-end gap-2 pl-3 flex-shrink-0">
+              <span class="text-xs text-gray-400">6 hr</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.196-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.783-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+              </svg>
+            </div>
+          </li>
+
+          <li class="flex items-center justify-between px-4 py-3 hover:bg-gray-800/60 cursor-pointer">
+            <div class="min-w-0">
+              <p class="text-sm text-gray-200 font-semibold">Trevor Hansen</p>
+              <p class="font-bold text-white text-sm">Birthday gift</p>
+              <p class="text-sm text-gray-400 truncate">Have any ideas about what we should get Heidi for her birthday?</p>
+            </div>
+            <div class="flex flex-col items-end gap-2 pl-3 flex-shrink-0">
+              <span class="text-xs text-gray-400">12 hr</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.196-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.783-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+              </svg>
+            </div>
+          </li>
+
+          <li class="flex items-center justify-between px-4 py-3 hover:bg-gray-800/60 cursor-pointer">
+            <div class="min-w-0">
+              <p class="text-sm text-gray-200 font-semibold">Britta Holt</p>
+              <p class="font-bold text-white text-sm">Recipe to try</p>
+              <p class="text-sm text-gray-400 truncate">We should eat this: Grate, Squash, Corn, and tomatillo Tacos.</p>
+            </div>
+            <div class="flex flex-col items-end gap-2 pl-3 flex-shrink-0">
+              <span class="text-xs text-gray-400">18 hr</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.196-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.783-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+              </svg>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
