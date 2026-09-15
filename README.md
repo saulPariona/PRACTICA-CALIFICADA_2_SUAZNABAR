@@ -23,5 +23,4 @@ Tecnologías utilizadas
 Organización del trabajo
 El líder del equipo creó el repositorio en GitHub y otorgó acceso a los integrantes del equipo. Cada integrante trabajó en una rama propia identificada con sus apellidos. Al finalizar el trabajo, el líder realizó el merge de las ramas en la rama principal del proyecto.
 
-Enlace del repositorio:
-[Pegar aquí el enlace de GitHub]
+
